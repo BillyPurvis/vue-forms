@@ -1,0 +1,19 @@
+User Journey
+++++++++++++++++++++++++
+
++ Login, upon success bounce the form out to the top, fade in the welcome message with user's name taken from account. 
+
++ If no account, bounce out form, slide the sign up form in from the left and fade async. 
+
++ Once Sign up account has been active, move it over, slide up user draft, then use two way binding. 
+
+
+
+Tools being used
+++++++++++++++++++++++++
+
++ Vue Router
+    - /signup
+    - /Login
+
++ Make each stage a vue compontent with template in the component, then call via Vue Router
