@@ -1,13 +1,9 @@
+// register sign up form component
+Vue.component('sign-up', {
+    template: '<h1>Vue Component</h1>'
+})
 
-// Don't forget to compile ES6
-
-// Create Vue Instance For Sign Up Form
-const signUpForm = new Vue({
-    el: '.app', 
-    data: {
-        msg: 'Vue'
-    },
-    methods: {
-
-    }
-});
+// Create root instance of Vue
+const vm = new Vue({
+    el: '.app'
+})

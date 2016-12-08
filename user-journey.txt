@@ -17,3 +17,13 @@ Tools being used
     - /Login
 
 + Make each stage a vue compontent with template in the component, then call via Vue Router
+
+
+Tasks
+========================
+
++ Set up babel
++ Convert forms to vue components
++ Add vue Router
++ Set up animations
++ Add two way data 
