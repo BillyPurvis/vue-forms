@@ -34,6 +34,7 @@ Technologies:
 - Vue.js 2.0
 - SCSS
 - Vue router
+- HTML5 Boilerplate
 
 # Prerequisites
 ====================
