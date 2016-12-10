@@ -1,342 +1,330 @@
-.gradient, .input-wrap, #submit-wrap, #signup-form #next-wrap, #user-draft-card .user-picture-cont, #user-draft-card .user-data .gradient-divider, #user-draft-card #progress-btn-wrap {
-	background: #e700ce;
-  /* Old browsers */
-	background: -moz-linear-gradient(left, #e700ce 0%, #ff536d 100%);
-  /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #e700ce 0%, #ff536d 100%);
-  /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #e700ce 0%, #ff536d 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e700ce', endColorstr='#ff536d',GradientType=1 );
-  /* IE6-9 */;
+// colors/fonts
+$navy: #434D5B;
+$grey: #C0C7CB;
+$Mont: 'Montserrat', sans-serif;
+$lato: 'Lato', sans-serif;
+
+// Border Gradient: 
+.gradient {
+  background: rgb(231,0,206); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgb(231,0,206) 0%, rgb(255,83,109) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgb(231,0,206) 0%,rgb(255,83,109) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgb(231,0,206) 0%,rgb(255,83,109) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e700ce', endColorstr='#ff536d',GradientType=1 ); /* IE6-9 */
 }
 
 html {
-	font-size: 20px;
-	box-sizing: border-box;
+  font-size: 20px;
+  box-sizing: border-box;
 }
-
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
-
 body {
-	margin: 0;
-	width: 100%;
-	height: 100vh;
-	position: relative;
-	background: #FF5F6D;
-	background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
-	background: linear-gradient(to left, #FF5F6D, #FFC371);
-	font-family: "Lato", sans-serif;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #FF5F6D;
+  background: -webkit-linear-gradient(to left, #FF5F6D ,   #FFC371);
+  background: linear-gradient(to left, #FF5F6D , #FFC371);     
+  font-family: $lato;
 }
-
 *:focus {
-	outline: 0;
+  outline: 0;
 }
-
+// Form Resuable
 .cross-x {
-	top: 25px;
-	right: 25px;
-	width: 22px;
-	height: 24px;
-	cursor: pointer;
-	position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 22px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
 }
-
 .card-cont {
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-	max-width: 514px;
-	min-width: 280px;
-	min-height: 540px;
-	max-height: 630px;
-	background: #434D5B;
-	position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 514px;
+  min-width: 280px;
+  min-height: 540px;
+  max-height: 630px;
+  background: $navy;
+  position: absolute;
 }
-
 .form-inner {
-	margin: 0 auto;
-	max-width: 414px;
+  margin: 0 auto;
+  max-width: 414px;
 }
-
 label {
-	height: 0;
-	opacity: 0;
-	display: block;
+  height: 0;
+  opacity: 0;
+  display: block;
 }
-
+// Form Elements
 .form-head {
-	width: 100%;
-	height: 130px;
-	padding-top: 98px;
-	margin-bottom: 93px;
+  width: 100%;
+  height: 130px;
+  padding-top: 98px;
+  margin-bottom: 93px;
 }
-
 .form-name {
-	margin: 0;
-	color: #C0C7CB;
-	font-size: 1.4em;
-	font-family: "Montserrat", sans-serif;
+  margin: 0;
+  color: $grey;
+  font-size: 1.4em;
+  font-family: $Mont;
 }
-
 .input-wrap {
-	width: 100%;
-	height: calc(57px + 4px);
-	border-radius: 2px;
+  width: 100%;
+  height: calc(57px + 4px);
+  border-radius: 2px;
+  @extend .gradient;
+  &:first-child {
+    margin-bottom: 35px;
+  }
 }
-
-.input-wrap:first-child {
-	margin-bottom: 35px;
-}
-
 .input {
-	top: 2px;
-	left: 2px;
-	border: 0;
-	height: 57px;
-	color: #C0C7CB;
-	font-size: 1em;
-	background: #434D5B;
-	padding-left: 20px;
-	position: relative;
-	font-family: "Montserrat", sans-serif;
-	width: calc(100% - 4px);
+  top: 2px;
+  left: 2px;
+  border: 0;
+  height: 57px;
+  color: $grey;
+  font-size: 1em;
+  background: $navy;
+  padding-left: 20px;
+  position: relative;
+  font-family: $Mont;
+  width: calc(100% - 4px);
 }
-
 #password-reset {
-	color: #C0C7CB;
-	float: right;
-	font-size: 0.8em;
-	margin-top: 20px;
-	display: inline-block;
+  color: $grey;
+  float: right;
+  font-size: 0.8em;
+  margin-top: 20px;
+  display: inline-block;
 }
-
 .btn-wraps {
-	width: 100%;
-	clear: both;
-	margin-top: 88px;
+  width: 100%;
+  clear: both;
+  margin-top: 88px;
 }
-
-.button, #submit-wrap, #sign-up-wrap, #signup-form #next-wrap, #user-draft-card #progress-btn-wrap {
-	height: 56px;
-	width: 184px;
-	cursor: pointer;
-	position: relative;
-	border-radius: 10px;
-	display: inline-block;
+.button {
+  height: 56px;
+  width: 184px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  display: inline-block;
 }
-
 #submit-wrap {
-	float: left;
+  float: left;
+  @extend .button;
+  @extend .gradient;
+  input {
+    top: 2px;
+    left: 2px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: $navy;
+    position: absolute;
+    display: inline-block;
+    font-family: $Mont;
+    color: $grey;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
 }
-
-#submit-wrap input {
-	top: 2px;
-	left: 2px;
-	border: 0;
-	cursor: pointer;
-	border-radius: 10px;
-	width: calc(100% - 4px);
-	height: calc(100% - 4px);
-	background: #434D5B;
-	position: absolute;
-	display: inline-block;
-	font-family: "Montserrat", sans-serif;
-	color: #C0C7CB;
-	font-size: 1em;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-}
-
 #sign-up-wrap {
-	float: right;
+  float: right;
+  @extend .button;
+  button {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    color: $grey;
+    opacity: 0.18;
+    font-size: 1em;
+    font-family: $Mont;
+    border-radius: 10px;
+    background: #737F90;
+    text-transform: uppercase;
+  }
 }
 
-#sign-up-wrap button {
-	border: 0;
-	width: 100%;
-	height: 100%;
-	color: #C0C7CB;
-	opacity: 0.18;
-	font-size: 1em;
-	font-family: "Montserrat", sans-serif;
-	border-radius: 10px;
-	background: #737F90;
-	text-transform: uppercase;
-}
-
+// Welcome Area
 .welcome-banner {
-	display: none;
-	width: auto;
-	margin: 0 auto;
-	max-width: 500px;
-	text-align: center;
+  
+  display: none;
+  
+  width: auto;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  .welcome-user {
+    color: #fff;
+  }
 }
 
-.welcome-banner .welcome-user {
-	color: #fff;
-}
-
+// Toggle each to see...
 #login-form {
-	display: none;
+  display: none;
 }
-
 #signup-form {
-	display: none;
+  display: none;
 }
-
 #user-draft-card {
-	display: none;
+  //display: none;
 }
 
-#signup-form .form-head {
-	padding-top: 70px;
-	margin-bottom: 60px;
+// Sign up form SCSS
+#signup-form {
+  .form-head {
+    padding-top: 70px;
+    margin-bottom: 60px;
+  }
+  .form-inner {
+    .half-input {
+      width: 190px;
+      display: inline-block;
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
+    .input-wrap {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  .btn-wraps {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #next-wrap {
+    width: 150px;
+    height: 46px;
+    float: right;
+    @extend .button;
+    @extend .gradient;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 0;
+    a {
+    top: 2px;
+    left: 2px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: $navy;
+    position: absolute;
+    display: inline-block;
+    font-family: $Mont;
+    color: $grey;
+    font-size: 0.82em;
+    padding-top: 11px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  }
 }
 
-#signup-form .form-inner .half-input {
-	width: 190px;
-	display: inline-block;
-}
-
-#signup-form .form-inner .half-input:first-child {
-	margin-right: 30px;
-}
-
-#signup-form .form-inner .input-wrap {
-	margin-bottom: 30px;
-}
-
-#signup-form .form-inner .input-wrap:last-child {
-	margin-bottom: 35px;
-}
-
-#signup-form .btn-wraps {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-#signup-form #next-wrap {
-	width: 150px;
-	height: 46px;
-	float: right;
-	text-align: center;
-	border-radius: 15px;
-	margin-top: 0;
-}
-
-#signup-form #next-wrap a {
-	top: 2px;
-	left: 2px;
-	border: 0;
-	cursor: pointer;
-	border-radius: 15px;
-	width: calc(100% - 4px);
-	height: calc(100% - 4px);
-	background: #434D5B;
-	position: absolute;
-	display: inline-block;
-	font-family: "Montserrat", sans-serif;
-	color: #C0C7CB;
-	font-size: 0.82em;
-	padding-top: 11px;
-	text-decoration: none;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-}
-
+// User Card
 #user-draft-card {
-	text-align: center;
-}
-
-#user-draft-card .user-picture-cont {
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: calc(-162px / 2);
-	width: 162px;
-	height: 162px;
-	border-radius: 50%;
-	position: absolute;
-	overflow: hidden;
-}
-
-#user-draft-card .user-picture-cont .user-profile-avatar {
-	top: 2px;
-	left: 2px;
-	display: block;
-	position: relative;
-	border-radius: 50%;
-	width: calc(100% - 4px);
-	height: calc(100% - 4px);
-}
-
-#user-draft-card .user-data {
-	color: #C0C7CB;
-	margin-top: 135px;
-}
-
-#user-draft-card .user-data .user-name {
-	margin-top: 0;
-	font-family: "Montserrat", sans-serif;
-	font-size: 1.4em;
-	letter-spacing: 0.5px;
-	font-weight: normal;
-}
-
-#user-draft-card .user-data .user-location {
-	font-size: 0.9em;
-	font-family: "Montserrat", sans-serif;
-	font-weight: normal;
-}
-
-#user-draft-card .user-data .user-bio,
-    #user-draft-card .user-data .user-skills {
-	width: 80%;
-	margin: auto;
-}
-
-#user-draft-card .user-data .gradient-divider {
-	width: 128px;
-	height: 2px;
-	margin: 30px auto;
-}
-
-#user-draft-card #progress-btn-wrap {
-	width: 150px;
-	height: 46px;
-	float: right;
-	right: 40px;
-	text-align: center;
-	border-radius: 15px;
-	margin-top: 0;
-}
-
-#user-draft-card #progress-btn-wrap a {
-	top: 2px;
-	left: 2px;
-	border: 0;
-	cursor: pointer;
-	border-radius: 15px;
-	width: calc(100% - 4px);
-	height: calc(100% - 4px);
-	background: #434D5B;
-	position: absolute;
-	display: inline-block;
-	font-family: "Montserrat", sans-serif;
-	color: #C0C7CB;
-	font-size: 0.82em;
-	padding-top: 11px;
-	text-decoration: none;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
+  text-align: center;
+  
+  
+  .user-picture-cont {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(-162px / 2);
+    width: 162px;
+    height: 162px;
+    @extend .gradient;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    .user-profile-avatar {
+      top: 2px;
+      left: 2px;
+      display: block;
+      position: relative;
+      border-radius: 50%;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+    }
+  }
+  .user-data {
+    color: $grey;
+    margin-top: 135px;
+    .user-name {
+      margin-top: 0;
+      font-family: $Mont;
+      font-size: 1.4em;
+      letter-spacing: 0.5px;
+      font-weight: normal;
+    }
+    .user-location {
+      font-size: 0.9em;
+      font-family: $Mont;
+      font-weight: normal;
+    }
+    .user-bio,
+    .user-skills {
+      width: 80%;
+      margin: auto;
+    }
+    .gradient-divider {
+      width: 128px;
+      height: 2px;
+      margin: 30px auto;
+      @extend .gradient;
+    }
+  }
+  #progress-btn-wrap {
+    width: 150px;
+    height: 46px;
+    float: right;
+    right: 40px;
+    @extend .button;
+    @extend .gradient;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 0;
+    a {
+    top: 2px;
+    left: 2px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: $navy;
+    position: absolute;
+    display: inline-block;
+    font-family: $Mont;
+    color: $grey;
+    font-size: 0.82em;
+    padding-top: 11px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  }
+  
 }
