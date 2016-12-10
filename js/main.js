@@ -2,22 +2,22 @@
 
 // Register welcome-banner component
 Vue.component('welcome-banner', {
-template: "<h1>Welcome Banner</h1>"
+template: "#welcome-banner"
 })
 
 // Register login-form component
 Vue.component('login-form', {
-template: "<h1>Login Form</h1>"
+template: "#login"
 })
 
 // Register sign-up-form component
 Vue.component('sign-up-form', {
-template: "<h1>Sign Up form</h1>"
+template: "#signup-form"
 })
 
 // Register user-draft-card component
 Vue.component('user-draft-card', {
-template: "<h1>User Draft Card</h1>"
+template: "#user-card-draft"
 })
 
 // Create root instance of Vue
