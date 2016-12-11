@@ -1,4 +1,4 @@
-// Create component instances
+// Create & define component instances
 
 // Register welcome-banner component
 Vue.component('welcome-banner', {
@@ -6,7 +6,7 @@ template: "#welcome-banner"
 })
 
 // Register login-form component
-Vue.component('login-form', {
+const login_form = Vue.component('login-form', {
 template: "#login"
 })
 
@@ -20,7 +20,22 @@ Vue.component('user-draft-card', {
 template: "#user-card-draft"
 })
 
-// Create root instance of Vue
-const vm = new Vue({
-    el: '.app'
+// Temp
+const Bar = { template: '<div>Bar</div>'}
+
+// Create & define routes 
+const routes = [
+    { path: '/login', component: login_form },
+    { path: '/bar', component: Bar}
+]
+
+// Create router instance and pass routes object
+const router = new VueRouter({
+    routes // short hand for routes: routes
 })
+
+
+// Create root instance of Vue & mount router
+const vm = new Vue({
+    router
+}).$mount('.app')
