@@ -10,12 +10,11 @@ Accreditation to all developer communities and developers for troubleshooting he
 
 #####################################
 
-Author: Billy Purvis <br>
-Developer(s): Billy Purvis <br>
-Contact: purvisbilly@outlook.com for bugs, requests or correspondence <br>
-Copyright: Github Standard 2016 <br>
+*********************
 
-Accreditation to all developer communities and developers for troubleshooting help. <br>
+THIS PROJECT HAS SINCE BEEN DISCONTINUED AND MOVED TO A NEW REPO [HERE](https://github.com/BillyPurvis/Vue-Forms-Webpack).
+
+**********************
 
 #####################################
  
